@@ -14,7 +14,7 @@ $date = new DateTime();
 $epoch = $date->getTimestamp();
 
 // SOUTH BOUND DATA
-$sb_maps_api_url = "https://maps.googleapis.com/maps/api/directions/json?origin=37.876152,-122.511077&destination=37.805310,-122.473599&departure_time=".$epoch."&key=AIzaSyARg_emuI1av0H_nKFKTd3bQXBoj6B44fo";
+$sb_maps_api_url = "https://maps.googleapis.com/maps/api/directions/json?origin=37.876152,-122.511077&destination=37.805310,-122.473599&departure_time=".$epoch."&key=<KEY>";
 $sb_returned_content = get_data($sb_maps_api_url);
 
 $sb_json_a=json_decode($sb_returned_content,true);
@@ -47,7 +47,7 @@ if ($sb_dur_traffic_txt_int == $sb_dur_txt_int) {
 	}
 
 // NORTH BOUND DATA
-$nb_maps_api_url = "https://maps.googleapis.com/maps/api/directions/json?origin=37.805472,-122.473531&destination=37.884883,-122.516651&departure_time=".$epoch."&key=AIzaSyARg_emuI1av0H_nKFKTd3bQXBoj6B44fo";
+$nb_maps_api_url = "https://maps.googleapis.com/maps/api/directions/json?origin=37.805472,-122.473531&destination=37.884883,-122.516651&departure_time=".$epoch."&key=<KEY>";
 $nb_returned_content = get_data($nb_maps_api_url);
 
 $nb_json_a=json_decode($nb_returned_content,true);
